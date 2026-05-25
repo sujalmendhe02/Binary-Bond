@@ -9,7 +9,7 @@ import styleHubImg5 from '/product5.png';
 
 const projectsData = [
   { title: 'StyleHub — Premium Shopping Platform', type: 'E-commerce', image: styleHubImg, link: 'https://product-demo-by-sujal.onrender.com/', size: 'large' },
-  { title: 'Skinsify — A E-Commerce Site', type: 'Landing Page', image: styleHubImg2, link: 'https://skinsify.onrender.com', size: 'small' },
+  { title: 'Skinsify — An E-Commerce Site', type: 'Landing Page', image: styleHubImg2, link: 'https://skinsify.onrender.com', size: 'small' },
   { title: 'Product — Premium Demo 1', type: 'Website', image: styleHubImg3, link: 'https://product-demo1.onrender.com/', size: 'small' },
   { title: 'Product — Creative Demo 2', type: 'Website', image: styleHubImg4, link: 'https://product-demo2.onrender.com', size: 'small' },
   { title: 'Product — Advanced Demo 3', type: 'Website', image: styleHubImg5, link: 'https://product-demo3.onrender.com/', size: 'large' },
