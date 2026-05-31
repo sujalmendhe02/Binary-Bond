@@ -11,15 +11,15 @@ export default function About() {
     <section id="about" className="py-20 bg-white overflow-hidden px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          
+
           {/* Left: Clean Image Container */}
           <div className="w-full lg:w-1/2">
             <div className="relative inline-block w-full">
               {/* Main Image - Properly Scaled */}
               <div className="rounded-3xl overflow-hidden shadow-xl border border-gray-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Binary Bond Workspace" 
+                <img
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200"
+                  alt="Software Development Team"
                   className="w-full h-[350px] md:h-[450px] object-cover"
                 />
               </div>
@@ -42,7 +42,7 @@ export default function About() {
                 <span className="text-brand-blue">Market Realities.</span>
               </h2>
               <p className="text-gray-600 text-base leading-relaxed font-medium">
-                Binary Bond Nagpur ki ek emerging digital agency hai. Hum sirf code nahi likhte, hum aapke business ke liye ek growth machine taiyaar karte hain. Humara focus naye founders ko wo technology dena hai jo unhe competition se aage rakhe.
+                Binary Bond is an emerging digital agency based in Nagpur. We don't just build websites—we create growth-driven digital solutions for businesses. Our focus is to empower startups and entrepreneurs with modern technology that helps them stand out and stay ahead of the competition.
               </p>
             </div>
 
@@ -63,8 +63,8 @@ export default function About() {
 
             {/* CTA to talk */}
             <div className="pt-4">
-              <a 
-                href="https://ig.me/m/binary.bond_official" 
+              <a
+                href="https://ig.me/m/binary.bond_official"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-gray-900 hover:bg-brand-blue text-white px-8 py-4 rounded-full text-sm font-bold transition-all duration-300 shadow-xl"
               >

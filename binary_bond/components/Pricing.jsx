@@ -98,14 +98,39 @@ export default function Pricing() {
       </div>
 
       {/* 4 Cards in One Line */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div
+        className="
+    flex xl:grid xl:grid-cols-4
+    overflow-x-auto xl:overflow-visible
+    gap-6
+    snap-x snap-mandatory
+    max-w-7xl mx-auto
+    pb-2
+    [-ms-overflow-style:none]
+    [scrollbar-width:none]
+    [&::-webkit-scrollbar]:hidden
+  "
+      >
         {plans.map((plan, index) => (
           <div
             key={index}
-            className={`relative p-7 rounded-[2.5rem] transition-all duration-500 hover:-translate-y-3 ${plan.featured
-              ? "bg-gray-900 text-white shadow-2xl scale-105 z-10 border-2 border-brand-blue"
-              : "bg-white text-gray-900 border border-gray-100 shadow-lg"
-              }`}
+            className={`
+
+    flex-shrink-0
+    w-[85vw]
+    sm:w-[70vw]
+    md:w-[50vw]
+    xl:w-auto
+    snap-center
+
+    relative p-7 rounded-[2.5rem]
+    transition-all duration-500 hover:-translate-y-3
+
+    ${plan.featured
+                ? "bg-gray-900 text-white shadow-2xl scale-105 z-10 border-2 border-brand-blue"
+                : "bg-white text-gray-900 border border-gray-100 shadow-lg"
+              }
+  `}
           >
             {plan.featured && (
               <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
@@ -158,8 +183,8 @@ export default function Pricing() {
                 });
               }}
               className={`w-full py-4 rounded-2xl font-black text-sm transition-all ${plan.featured
-                  ? "bg-brand-blue hover:bg-blue-600 text-white"
-                  : "bg-gray-100 hover:bg-gray-900 hover:text-white text-gray-900"
+                ? "bg-brand-blue hover:bg-blue-600 text-white"
+                : "bg-gray-100 hover:bg-gray-900 hover:text-white text-gray-900"
                 }`}
             >
               {plan.cta}
