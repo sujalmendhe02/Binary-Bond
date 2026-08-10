@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUpRight, Target } from 'lucide-react';
 
 export default function Hero() {
-  const instaLink = "https://ig.me/m/binary.bond_official";
+  const instaLink = "https://ig.me/m/binary.bond";
 
   const handleHireUsClick = () => {
     window.open(instaLink, '_blank', 'noopener,noreferrer');

@@ -115,7 +115,7 @@ export default function Pricing() {
           <div
             key={index}
             className={`
-
+    relative
     flex-shrink-0
     w-[85vw]
     sm:w-[70vw]
@@ -123,72 +123,78 @@ export default function Pricing() {
     xl:w-auto
     snap-center
 
-    relative p-7 rounded-[2.5rem]
-    transition-all duration-500 hover:-translate-y-3
-
-    ${plan.featured
-                ? "bg-gray-900 text-white shadow-2xl scale-105 z-10 border-2 border-brand-blue"
-                : "bg-white text-gray-900 border border-gray-100 shadow-lg"
-              }
+    ${plan.featured ? "order-first xl:order-none" : ""}
   `}
           >
             {plan.featured && (
-              <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
+              <span className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 bg-brand-blue text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-widest">
                 Most Popular
               </span>
             )}
 
-            <div className="mb-8">
-              <div className="mb-4">{plan.icon}</div>
+            <div
+              className={`
+    relative p-7 rounded-[2.5rem] overflow-hidden
+    transition-all duration-500 hover:-translate-y-3
 
-              <h3 className="text-sm font-black tracking-widest uppercase mb-2 opacity-80">
-                {plan.name}
-              </h3>
-
-              <div className="flex items-baseline justify-center gap-1">
-                <span className="text-2xl font-bold">₹</span>
-                <span className="text-4xl font-black">{plan.price}</span>
-              </div>
-            </div>
-
-            <ul className="space-y-4 mb-10 text-left">
-              {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-start gap-3 text-sm">
-                  <Check
-                    size={18}
-                    className={
-                      plan.featured
-                        ? "text-blue-400"
-                        : "text-brand-blue"
-                    }
-                  />
-
-                  <span
-                    className={
-                      plan.featured
-                        ? "opacity-90"
-                        : "text-gray-600"
-                    }
-                  >
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <button
-              onClick={() => {
-                document.getElementById("contact")?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }}
-              className={`w-full py-4 rounded-2xl font-black text-sm transition-all ${plan.featured
-                ? "bg-brand-blue hover:bg-blue-600 text-white"
-                : "bg-gray-100 hover:bg-gray-900 hover:text-white text-gray-900"
-                }`}
+    ${plan.featured
+                  ? "bg-gray-900 text-white shadow-2xl scale-105 z-10 border-2 border-brand-blue"
+                  : "bg-white text-gray-900 border border-gray-100 shadow-lg"
+                }
+  `}
             >
-              {plan.cta}
-            </button>
+              <div className="mb-8">
+                <div className="mb-4">{plan.icon}</div>
+
+                <h3 className="text-sm font-black tracking-widest uppercase mb-2 opacity-80">
+                  {plan.name}
+                </h3>
+
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-2xl font-bold">₹</span>
+                  <span className="text-4xl font-black">{plan.price}</span>
+                </div>
+              </div>
+
+              <ul className="space-y-4 mb-10 text-left">
+                {plan.features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <Check
+                      size={18}
+                      className={
+                        plan.featured
+                          ? "text-blue-400"
+                          : "text-brand-blue"
+                      }
+                    />
+
+                    <span
+                      className={
+                        plan.featured
+                          ? "opacity-90"
+                          : "text-gray-600"
+                      }
+                    >
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <button
+                onClick={() => {
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className={`w-full py-4 rounded-2xl font-black text-sm transition-all ${plan.featured
+                  ? "bg-brand-blue hover:bg-blue-600 text-white"
+                  : "bg-gray-100 hover:bg-gray-900 hover:text-white text-gray-900"
+                  }`}
+              >
+                {plan.cta}
+              </button>
+            </div>
           </div>
         ))}
       </div>

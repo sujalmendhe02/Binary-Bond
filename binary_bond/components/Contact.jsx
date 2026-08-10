@@ -52,6 +52,42 @@ export default function Contact() {
             </h2>
           </div>
 
+          {/* Socials */}
+          <div className="space-y-3">
+            <h3 className="inline-flex items-center gap-2 text-brand-blue font-bold text-xs uppercase tracking-wider">
+              <span className="w-4 h-2 bg-brand-blue rounded-full"></span>
+              Our Socials
+            </h3>
+
+            <div className="flex items-center gap-4">
+              <a
+                href="https://instagram.com/binary.bond"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-white hover:bg-brand-blue transition-colors overflow-hidden"
+              >
+                <img
+                  src="/insta_logo.png"
+                  alt="Instagram"
+                  className="w-5 h-5 object-contain"
+                />
+              </a>
+
+              <a
+                href="https://linkedin.com/company/yourhandle"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-white hover:bg-brand-blue transition-colors overflow-hidden"
+              >
+                <img
+                  src="/linkedin_logo.png"
+                  alt="LinkedIn"
+                  className="w-5 h-5 object-contain"
+                />
+              </a>
+            </div>
+          </div>
+
         </div>
 
         {/* Form */}
@@ -140,7 +176,7 @@ export default function Contact() {
           </form>
 
         </div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 }

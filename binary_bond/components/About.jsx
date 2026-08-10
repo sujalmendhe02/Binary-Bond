@@ -64,7 +64,7 @@ export default function About() {
             {/* CTA to talk */}
             <div className="pt-4">
               <a
-                href="https://ig.me/m/binary.bond_official"
+                href="https://ig.me/m/binary.bond"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-gray-900 hover:bg-brand-blue text-white px-8 py-4 rounded-full text-sm font-bold transition-all duration-300 shadow-xl"
               >
